@@ -9,32 +9,34 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .modal-content {
   background: #ffffff;
-  padding: 0.8rem 1rem;
+  padding: clamp(16px, 3vw, 24px);
   border-radius: 10px;
-  width: 30vw;
+  width: 100%;
+  max-width: 360px;
   position: relative;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  align-items: baseline;
+  box-sizing: border-box;
 }
 
 .modal-title {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.7rem;
+  margin: 0 0 14px 0;
+  font-size: clamp(15px, 1.6vw, 18px);
   font-weight: 600;
   color: #2b2b2b;
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 8px;
+  top: 12px;
   right: 14px;
   background: none;
   border: none;
@@ -48,9 +50,9 @@
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #e5e2dc;
-  padding: 0.1rem 0.1rem;
-  margin-bottom: 0.4rem;
-  font-size: 0.55rem;
+  padding: 6px 2px;
+  margin-bottom: 12px;
+  font-size: clamp(13px, 1.2vw, 14px);
   color: #2b2b2b;
   outline: none;
   background: transparent;
@@ -60,10 +62,10 @@
 }
 
 select.modal-input {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='5'><path d='M0 0 L4 5 L8 0' fill='none' stroke='%23999' stroke-width='1.2'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0 L5 6 L10 0' fill='none' stroke='%23999' stroke-width='1.4'/></svg>");
   background-repeat: no-repeat;
   background-position: right center;
-  padding-right: 0.8rem;
+  padding-right: 14px;
 }
 
 input[type="number"].modal-input::-webkit-outer-spin-button,
@@ -81,8 +83,12 @@ input[type="number"].modal-input {
   border-radius: 6px;
   background: #b8ab98;
   color: #fff;
-  padding: 0.3rem;
-  font-size: 0.45rem;
+  padding: 10px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.modal-submit-btn:hover {
+  background: #a8987f;
 }

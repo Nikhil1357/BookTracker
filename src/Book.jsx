@@ -1,4 +1,3 @@
-// Book.jsx
 import React from 'react'
 import Edit from './assets/edit.png';
 
@@ -9,7 +8,7 @@ function Book({bookdata, onEdit}) {
 
   return (
     <div style={{
-      padding:'0.35rem 0',
+      padding:'6px 0',
       borderBottom:'1px solid #e5e2dc',
       minWidth:0
     }}>
@@ -20,18 +19,18 @@ function Book({bookdata, onEdit}) {
         minWidth:0
       }}>
         <span style={{
-          fontSize:'0.6rem',
+          fontSize:'clamp(13px, 1.1vw, 16px)',
           fontWeight:600,
           color:'#2b2b2b',
           whiteSpace:'nowrap',
           overflow:'hidden',
           textOverflow:'ellipsis',
-          marginRight:'0.5rem'
+          marginRight:'8px'
         }}>
           {title}
         </span>
-        <div style={{display:'flex', alignItems:'center', gap:'0.35rem', flexShrink:0}}>
-          <span style={{fontSize:'0.45rem', color:'#999', whiteSpace:'nowrap'}}>
+        <div style={{display:'flex', alignItems:'center', gap:'6px', flexShrink:0}}>
+          <span style={{fontSize:'clamp(11px, 0.9vw, 13px)', color:'#999', whiteSpace:'nowrap'}}>
             {name}
           </span>
           <button
@@ -44,17 +43,17 @@ function Book({bookdata, onEdit}) {
               padding:0
             }}
           >
-            <img src={Edit} height={8} width={8} />
+            <img src={Edit} height={14} width={14} />
           </button>
         </div>
       </div>
 
       {totalpages > 0 && (
-        <div style={{display:'flex', alignItems:'center', gap:'0.35rem', marginTop:'0.25rem'}}>
+        <div style={{display:'flex', alignItems:'center', gap:'6px', marginTop:'4px'}}>
           <div style={{flex:1, height:'3px', borderRadius:'2px', background:'#eee', overflow:'hidden'}}>
             <div style={{width:`${progress}%`, height:'100%', background:'#b8ab98', borderRadius:'2px'}} />
           </div>
-          <span style={{fontSize:'0.4rem', color:'#aaa', whiteSpace:'nowrap'}}>
+          <span style={{fontSize:'clamp(10px, 0.8vw, 12px)', color:'#aaa', whiteSpace:'nowrap'}}>
             {pagesread}/{totalpages}
           </span>
         </div>
