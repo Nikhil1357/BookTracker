@@ -1,0 +1,88 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  width: 30vw;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+}
+
+.modal-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+}
+
+.modal-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #e5e2dc;
+  padding: 0.1rem 0.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.55rem;
+  color: #2b2b2b;
+  outline: none;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+}
+
+select.modal-input {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='5'><path d='M0 0 L4 5 L8 0' fill='none' stroke='%23999' stroke-width='1.2'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 0.8rem;
+}
+
+input[type="number"].modal-input::-webkit-outer-spin-button,
+input[type="number"].modal-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"].modal-input {
+  -moz-appearance: textfield;
+}
+
+.modal-submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #b8ab98;
+  color: #fff;
+  padding: 0.3rem;
+  font-size: 0.45rem;
+  font-weight: 600;
+  cursor: pointer;
+}
